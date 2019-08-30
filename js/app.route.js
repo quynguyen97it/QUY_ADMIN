@@ -28,6 +28,10 @@
           templateUrl: "/pages/chuyennganh.html",
           controller: "chuyennganhController"
       })
+      .when("/qlcanbogiangvien", {
+          templateUrl: "/pages/canbogiangvien.html",
+          controller: "canbogiangvienController"
+      })
       .otherwise({
           template: "<div class='container'><hr><h3>Không tìm thấy trang này</pages/h3><hr></pages/div></pages/br>"
       });

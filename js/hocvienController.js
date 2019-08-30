@@ -1,4 +1,4 @@
-rootApp.controller('hocvienController', ['$scope','$http', '$resource', function($scope, $http, $resource) {
+  rootApp.controller('hocvienController', ['$scope','$http', '$resource', function($scope, $http, $resource) {
 
 
   function fetchAllStudents() {
