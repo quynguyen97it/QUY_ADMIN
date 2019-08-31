@@ -32,6 +32,18 @@
           templateUrl: "/pages/canbogiangvien.html",
           controller: "canbogiangvienController"
       })
+      .when("/qlphonghoc", {
+        templateUrl: "/pages/phonghoc.html",
+        controller: "phonghocController"
+     })
+     .when("/qldoanhnghiep", {
+        templateUrl: "/pages/doanhnghiep.html",
+        controller: "doanhnghiepController"
+     })
+     .when("/qlnguoiquanly", {
+        templateUrl: "/pages/nguoiquanly.html",
+        controller: "nguoiquanlyController"
+     })
       .otherwise({
           template: "<div class='container'><hr><h3>Không tìm thấy trang này</pages/h3><hr></pages/div></pages/br>"
       });
