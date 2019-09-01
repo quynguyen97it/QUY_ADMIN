@@ -44,6 +44,10 @@
         templateUrl: "/pages/nguoiquanly.html",
         controller: "nguoiquanlyController"
      })
+     .when("/qltinhnang", {
+        templateUrl: "/pages/tinhnang.html",
+        controller: "tinhnangController"
+     })
       .otherwise({
           template: "<div class='container'><hr><h3>Không tìm thấy trang này</pages/h3><hr></pages/div></pages/br>"
       });
