@@ -51,6 +51,38 @@ rootApp.controller('tinhnangController', ['$scope','$http', '$resource', 'apiBas
   });
 }
 
+$scope.setTinhNangDelete = function(maTinhNang){
+  $scope.maTinhNangDelete = maTinhNang;
+}
+
+$scope.deleteTinhNang =  function(maTinhNang){
+  $http.delete(apiBaseUrl + '/delete_tinhnang/' + maTinhNang).then(function(res){
+    console.log('success ', res);
+    //location.reload();
+    $scope.loadData();
+  }, function(err) {
+
+  });
+}
+
+$scope.editModel = {};
+$scope.loadDataForEdit = function(maTinhNang) {
+  $http.get(apiBaseUrl + '/tinhnang/' + maTinhNang).then(function(res){
+    $scope.editModel = res.data;
+  });
+}
+
+$scope.editTN = function(maTinhNang){
+  var url = apiBaseUrl + '/update_tinhnang/' + $scope.editModel.id;
+  $http.put(url, $scope.editModel).then(function(res){
+    console.log('success ', res);
+    //location.reload();
+    $scope.loadData();
+  }, function(err) {
+
+  });
+}
+
   $scope.loadData();
   $scope.loadLoaiTaiKhoan();
 
