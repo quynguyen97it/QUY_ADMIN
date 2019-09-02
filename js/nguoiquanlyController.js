@@ -64,7 +64,7 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
         user.ngaysinh = $scope.ngaysinh;
         user.noisinh =$scope.noisinh;
         user.cmnd = $scope.cmnd;
-        user.gioitinh =$scope.ngaysinh;
+        user.gioitinh =$scope.gioitinh;
         user.ngayvaolam = $scope.ngayvaolam;
         user.password =$scope.password;
         user.accounttype = $scope.SelectLoaiTaiKhoan;

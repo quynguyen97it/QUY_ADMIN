@@ -28,7 +28,7 @@ rootApp.controller('doanhnghiepController', ['$scope','$http', '$resource', func
 
 
       
-      $scope.setMaDNDelete= function(id) {
+      $scope.setMaDNDelete = function(id) {
         $scope.MaDNDelete=id;
       };
 
@@ -44,7 +44,6 @@ rootApp.controller('doanhnghiepController', ['$scope','$http', '$resource', func
             }
           }
         );
-    
         $scope.Message = User.delete({
           id: $scope.MaDNDelete
         });

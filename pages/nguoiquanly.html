@@ -286,11 +286,11 @@
         <thead class="table-dark text-light">
         <tr>
             <th class="text-center">STT</th>
-            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!" class="w-10" ng-click="sortData('ho')">Họ</th>
-            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!" class="w-10" ng-click="sortData('tenlot')">Tên lót</th>
-            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!" class="w-10" ng-click="sortData('ten')">Tên</th>
-            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!" class="w-10" ng-click="sortData('email')">Email</th>
-            <th class="w-50 text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!" class="w-10" ng-click="sortData('diachi')">Địa chỉ</th>
+            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!"  ng-click="sortData('ho')">Họ</th>
+            <!-- <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!"  ng-click="sortData('tenlot')">Tên lót</th> -->
+            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!"  ng-click="sortData('ten')">Tên</th>
+            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!"  ng-click="sortData('email')">Email</th>
+            <th class="text-center" data-toggle="tooltip" data-placement="bottom" title="Click để sắp xếp!"  ng-click="sortData('diachi')">Địa chỉ</th>
             <th></th>
             <th></th>
         </tr>
@@ -303,9 +303,9 @@
             <td>
                 <span ng-bind="row.ho"></span>
             </td>
-            <td>
+            <!-- <td>
                 <span ng-bind="row.tenlot"></span>
-            </td>
+            </td> -->
             <td>
                 <span ng-bind="row.ten"></span>
             </td>
@@ -316,10 +316,10 @@
                 <span ng-bind="row.diachi"></span>
             </td>
             <td>
-                <button type="button" name="update" data-toggle="modal" data-target="#CapNhat" onclick="myFunction()" ng-click="getNQL(row)"> <span class="fa fa-edit"></span> Sửa </button>
+                <button type="button" name="update" data-toggle="modal" data-target="#CapNhat" onclick="myFunction()" ng-click="getNQL(row)"> <span class="fa fa-edit"></span></button>
             </td>
             <td>
-                <button type="button" name="delete" data-toggle="modal" data-target="#Xoa" onclick="myFunction()" ng-click="getMaNQL(row.manql)"><span class="fa fa-trash"></span> Xoá</button>
+                <button type="button" name="delete" data-toggle="modal" data-target="#Xoa" onclick="myFunction()" ng-click="getMaNQL(row.manql)"><span class="fa fa-trash"></span></button>
             </td>
         </tr>
         </tbody>
@@ -507,7 +507,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-            <button type="button" class="btn btn-primary" name="create" ng-click="updateNguoiQuanLy()">Cập nhật môn học</button>
+            <button type="button" class="btn btn-primary" name="create" ng-click="updateNguoiQuanLy()">Cập nhật người quản lý</button>
         </div>
         </div>
     </div>
