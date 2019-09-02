@@ -91,19 +91,12 @@ rootApp.controller('phonghocController', ['$scope','$http', '$resource', functio
               $scope.reverse = false;
           $scope.sortColumn = column;
       }
-      // $scope.getSortClass = function (column) {
-      //     if ($scope.sortColumn == column) {
-      //         return $scope.reverse ? 'arrow-up' : 'arrow-down';
-      //     }
-      //     return '';
-      // }
       $scope.pageNo=0;
       $scope.pageSize=5;
       $scope.total=0;
 
       $scope.selectPhanTrang = function (SelectPhanTrang){
         $scope.pageSize=SelectPhanTrang;
-        localtion.reload();
       }
 
       function getCountPhongHoc() {

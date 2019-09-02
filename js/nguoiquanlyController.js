@@ -101,6 +101,7 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
         $scope.ho = "";
         $scope.tenlot = "";
         $scope.ten = "";
+        $scope.gioitinh = "Nam";
         $scope.diachi = "";
         $scope.email= "";
         $scope.sdt= "";
@@ -119,6 +120,7 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
     $scope.getNQL = function(nguoiquanly) {
         $scope.manql = nguoiquanly.manql;
         $scope.ho = nguoiquanly.ho;
+        $scope.gioitinh = nguoiquanly.gioitinh;
         $scope.tenlot = nguoiquanly.tenlot;
         $scope.ten = nguoiquanly.ten;
         $scope.diachi = nguoiquanly.diachi;
@@ -126,11 +128,10 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
         $scope.sdt= nguoiquanly.sdt;
         $scope.luong= nguoiquanly.luong;
         $scope.hsluong= nguoiquanly.hsluong;
-        $scope.ngaysinh= nguoiquanly.ngaysinh;
+        $scope.ngaysinh= new Date(nguoiquanly.ngaysinh);
         $scope.noisinh= nguoiquanly.noisinh;
         $scope.cmnd= nguoiquanly.cmnd;
-        $scope.ngaysinh= nguoiquanly.ngaysinh;
-        $scope.ngayvaolam= nguoiquanly.ngayvaolam;
+        $scope.ngayvaolam= new Date(nguoiquanly.ngayvaolam);
         $scope.password= nguoiquanly.password;
         $scope.SelectLoaiTaiKhoan= nguoiquanly.SelectLoaiTaiKhoan;
         return $scope.manql;
@@ -192,7 +193,7 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
     
     $scope.selectPhanTrang = function (SelectPhanTrang){
       $scope.pageSize=SelectPhanTrang;
-      localtion.reload();
+      //location.reload();
     }
 
       function getCountNguoiQuanLy() {
@@ -284,6 +285,5 @@ rootApp.controller('nguoiquanlyController', ['$scope','$http', '$resource', func
         getNguoiQuanLyPage();
       }
     };
-
 
 }]);
