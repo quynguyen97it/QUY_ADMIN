@@ -1,53 +1,45 @@
-﻿<!DOCTYPE html>
-<html ng-app="rootApp" ng-controller="rootappController">
+<!DOCTYPE html>
+<html ng-app="adminApp">
 <head>
     <!-- Required meta tags-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title Page-->
     <title>Admin</title>
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <!-- Fontfaces CSS-->
-    <link href="css/font-face.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
-    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
-    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/css/font-face.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
     <!-- Bootstrap CSS-->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/css/style.css" rel="stylesheet">
+    <link href="assets/lib/css/bootstrap.min.css" rel="stylesheet" media="all">
     <!-- Vendor CSS-->
-    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
-    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
-    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
-    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
-    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
-    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
-    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="assets/lib/vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
     <!-- Main CSS-->
-    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link href="assets/lib/css/theme.css" rel="stylesheet" media="all">
     <!-- Angular JS-->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/angular.min.js"></script>
-    <script src="js/angular-route.js"></script>
-    <script src="js/angular-resource.min.js"></script>
-    <script src="js/app.module.js"></script>
-    <script src="js/app.route.js"></script>
+    <script src="assets/lib/js/bootstrap.min.js"></script>
+    <script src="assets/lib/js/jquery.min.js"></script>
+    <script src="assets/lib/js/popper.min.js"></script>
+    <script src="assets/lib/js/angular.min.js"></script>
+    <script src="assets/lib/js/angular-route.js"></script>
+    <script src="assets/lib/js/angular-resource.min.js"></script>
+    <!-- route and admin module angularjs -->
+    <script src="app/admin.module.js"> </script>
+    <script src="app/admin.route.js"> </script>
 
-    <script src="js/ui-bootstrap-tpls-3.0.6.min.js"></script>
+    <script src="assets/lib/js/ui-bootstrap-tpls-3.0.6.min.js"></script>
 
-    <script src="js/hocvienController.js"></script>
-    <script src="js/truonghocController.js"></script>
-    <script src="js/khoahocController.js"></script>
-    <script src="js/monhocController.js"></script>
-    <script src="js/daotaoController.js"></script>
-    <script src="js/chuyennganhController.js"></script>
-    <script src="js/canbogiangvienController.js"></script>
-    <script src="js/phonghocContrller.js"></script>
-    <script src="js/doanhnghiepController.js"></script>
-    <script src="js/nguoiquanlyController.js"></script>
-    <script src="js/tinhnangController.js"></script>
     <!-- Ckeditor JS-->
-    <script type="text/javascript" src="ckeditor/ckeditor.js"> </script>
+    <script type="text/javascript" src="assets/lib/ckeditor/ckeditor.js"> </script>
 </head>
 <body class="animsition">
     <div class="page-wrapper">
@@ -57,7 +49,7 @@
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
                         <a class="logo" href="index.html">
-                            <img src="images/icon/logo.png" alt="Admin" />
+                            <img src="assets/lib/images/icon/logo.png" alt="Admin" />
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
                             <span class="hamburger-box">
@@ -70,101 +62,101 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li>
-                            <a class="js-arrow" href="/">
-                                <i class="fas fa-tachometer-alt"></i>Admin
-                            </a>
-                        </li>
+                      <li>
+                          <a class="js-arrow" href="/">
+                              <i class="fas fa-tachometer-alt"></i>Admin
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlhocvien">
-                                <i class="fas fa-table"></i>Quản lý học viên
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!hocvien">
+                              <i class="fas fa-table"></i>Quản lý học viên
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlkhoahoc">
-                                <i class="fas fa-table"></i>Quản lý khoá học
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!khoahoc">
+                              <i class="fas fa-table"></i>Quản lý khoá học
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qltruonghoc">
-                                <i class="fas fa-table"></i>Quản lý trường học
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!truonghoc">
+                              <i class="fas fa-table"></i>Quản lý trường học
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlmonhoc">
-                                <i class="fas fa-table"></i>Quản lý môn học
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!monhoc">
+                              <i class="fas fa-table"></i>Quản lý môn học
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qldaotao">
-                                <i class="fas fa-table"></i>Quản lý đào tạo
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!daotao">
+                              <i class="fas fa-table"></i>Quản lý đào tạo
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlchuyennganh">
-                                <i class="fas fa-table"></i>Quản lý chuyên ngành
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!chuyennganh">
+                              <i class="fas fa-table"></i>Quản lý chuyên ngành
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlcanbogiangvien">
-                                <i class="fas fa-table"></i>Quản lý giảng viên
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!thoikhoabieu">
+                              <i class="fas fa-table"></i>Quản lý thời khoá biểu
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlthoikhoabieu">
-                                <i class="fas fa-table"></i>Quản lý thời khoá biểu
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qltinhnang">
-                                <i class="fas fa-table"></i>Quản lý tính năng
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qlthongbao">
-                                <i class="fas fa-table"></i>Quản lý thông báo
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qlgopy">
-                                <i class="fas fa-table"></i>Quản lý góp ý
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qlphonghoc">
-                                <i class="fas fa-table"></i>Quản lý phòng học
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qldiemhocvien">
-                                <i class="fas fa-table"></i>Quản lý điểm học viên
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!thongbao">
+                              <i class="fas fa-table"></i>Quản lý thông báo
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qltaikhoan">
-                                <i class="fas fa-table"></i>Quản lý tài khoản
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qldoanhnghiep">
-                                <i class="fas fa-table"></i>Quản lý doanh nghiệp
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!diemhocvien">
+                              <i class="fas fa-table"></i>Quản lý điểm học viên
+                          </a>
+                      </li>
 
-                        <li>
-                            <a href="#!qlnguoiquanly">
-                                <i class="fas fa-table"></i>Quản lý người quản lý
-                            </a>
-                        </li>
+                      <li>
+                          <a href="#!giangvien">
+                              <i class="fas fa-table"></i>Quản lý giảng viên
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#!tinhnang">
+                              <i class="fas fa-table"></i>Quản lý tính năng
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#!gopy">
+                              <i class="fas fa-table"></i>Quản lý góp ý
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#!admin">
+                              <i class="fas fa-table"></i>Quản lý admin
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#!phonghoc">
+                              <i class="fas fa-table"></i>Quản lý phòng học
+                          </a>
+                      </li>
+
+                      <li>
+                          <a href="#!doanhnghiep">
+                              <i class="fas fa-table"></i>Quản lý doanh nghiệp
+                          </a>
+                      </li>
                     </ul>
                 </div>
             </nav>
@@ -174,7 +166,7 @@
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
                 <a href="#">
-                    <img src="images/icon/logo.png" alt="Admin" />
+                    <img src="assets/lib/images/icon/logo.png" alt="Admin" />
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
@@ -187,83 +179,95 @@
                         </li>
 
                         <li>
-                            <a href="#!qlhocvien">
+                            <a href="#!hocvien">
                                 <i class="fas fa-table"></i>Quản lý học viên
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qlkhoahoc">
+                            <a href="#!khoahoc">
                                 <i class="fas fa-table"></i>Quản lý khoá học
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qltruonghoc">
+                            <a href="#!truonghoc">
                                 <i class="fas fa-table"></i>Quản lý trường học
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qlmonhoc">
+                            <a href="#!monhoc">
                                 <i class="fas fa-table"></i>Quản lý môn học
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qldaotao">
+                            <a href="#!daotao">
                                 <i class="fas fa-table"></i>Quản lý đào tạo
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qlchuyennganh">
+                            <a href="#!chuyennganh">
                                 <i class="fas fa-table"></i>Quản lý chuyên ngành
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qlcanbogiangvien">
-                                <i class="fas fa-table"></i>Quản lý giảng viên
+                            <a href="#!thoikhoabieu">
+                                <i class="fas fa-table"></i>Quản lý thời khoá biểu
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qlthoikhoabieu">
-                                <i class="fas fa-table"></i>Quản lý thời khoá biểu
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qltinhnang">
-                                <i class="fas fa-table"></i>Quản lý tính năng
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qlthongbao">
+                            <a href="#!thongbao">
                                 <i class="fas fa-table"></i>Quản lý thông báo
                             </a>
                         </li>
+
                         <li>
-                            <a href="#!qlgopy">
-                                <i class="fas fa-table"></i>Quản lý góp ý
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qlphonghoc">
-                                <i class="fas fa-table"></i>Quản lý phòng học
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#!qldiemhocvien">
+                            <a href="#!diemhocvien">
                                 <i class="fas fa-table"></i>Quản lý điểm học viên
                             </a>
                         </li>
 
                         <li>
-                            <a href="#!qltaikhoan">
-                                <i class="fas fa-table"></i>Quản lý tài khoản
+                            <a href="#!giangvien">
+                                <i class="fas fa-table"></i>Quản lý giảng viên
                             </a>
                         </li>
+
+                        <li>
+                            <a href="#!tinhnang">
+                                <i class="fas fa-table"></i>Quản lý tính năng
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!gopy">
+                                <i class="fas fa-table"></i>Quản lý góp ý
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!admin">
+                                <i class="fas fa-table"></i>Quản lý admin
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!phonghoc">
+                                <i class="fas fa-table"></i>Quản lý phòng học
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#!doanhnghiep">
+                                <i class="fas fa-table"></i>Quản lý doanh nghiệp
+                            </a>
+                        </li>
+
                     </ul>
                 </nav>
             </div>
@@ -276,18 +280,13 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                         <div class="header-wrap">
-                            <form class="form-header" action="" method="POST">
-                                <input class="au-input au-input--xl" type="text" name="search" placeholder="Nhập thông tin cần tìm..." />
-                                <button class="au-btn--submit" type="submit">
-                                    <i class="zmdi zmdi-search"></i>
-                                </button>
-                            </form>
+                            <div class="form-header"></div>
                             <div class="header-button">
 
                                 <div class="account-wrap">
                                   <div class="account-item clearfix js-item-menu" id="header-button">
                                       <div class="image">
-                                          <img src="images/icon/avatar-08.jpg" alt="Quý Nguyễn" />
+                                          <img src="assets/lib/images/icon/avatar-08.jpg" alt="Quý Nguyễn" />
                                       </div>
                                       <div class="content">
                                           <a class="js-acc-btn" href="#">Quý Nguyễn</a>
@@ -296,7 +295,7 @@
                                           <div class="info clearfix">
                                               <div class="image">
                                                   <a href="#">
-                                                      <img src="images/icon/avatar-08.jpg" alt="Quý Nguyễn" />
+                                                      <img src="assets/lib/images/icon/avatar-08.jpg" alt="Quý Nguyễn" />
                                                   </a>
                                               </div>
                                               <div class="content">
@@ -355,27 +354,44 @@
         </div>
     </div>
     <!-- Jquery JS-->
-    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script src="assets/lib/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->
-    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
-    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="assets/lib/vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="assets/lib/vendor/bootstrap-4.1/bootstrap.min.js"></script>
     <!-- Vendor JS       -->
-    <script src="vendor/slick/slick.min.js">
+    <script src="assets/lib/vendor/slick/slick.min.js">
     </script>
-    <script src="vendor/wow/wow.min.js"></script>
-    <script src="vendor/animsition/animsition.min.js"></script>
-    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    <script src="assets/lib/vendor/wow/wow.min.js"></script>
+    <script src="assets/lib/vendor/animsition/animsition.min.js"></script>
+    <script src="assets/lib/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
     </script>
-    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendor/counter-up/jquery.counterup.min.js">
+    <script src="assets/lib/vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="assets/lib/vendor/counter-up/jquery.counterup.min.js">
     </script>
-    <script src="vendor/circle-progress/circle-progress.min.js"></script>
-    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
-    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
-    <script src="vendor/select2/select2.min.js">
+    <script src="assets/lib/vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="assets/lib/vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="assets/lib/vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="assets/lib/vendor/select2/select2.min.js">
     </script>
     <!-- Main JS-->
-    <script src="js/main.js"></script>
+    <script src="assets/lib/js/main.js"></script>
+
+    <!-- controllers -->
+    <script src="app/components/quanly/page_hocvien/hocvienController.js"> </script>
+    <script src="app/components/quanly/page_khoahoc/khoahocController.js"> </script>
+    <script src="app/components/quanly/page_truonghoc/truonghocController.js"> </script>
+    <script src="app/components/quanly/page_monhoc/monhocController.js"> </script>
+    <script src="app/components/quanly/page_daotao/daotaoController.js"> </script>
+    <script src="app/components/quanly/page_chuyennganh/chuyennganhController.js"> </script>
+    <script src="app/components/quanly/page_giangvien/giangvienController.js"> </script>
+    <script src="app/components/quanly/page_tinhnang/tinhnangController.js"> </script>
+    <script src="app/components/quanly/page_gopy/gopyController.js"> </script>
+    <script src="app/components/quanly/page_diemhocvien/diemhocvienController.js"> </script>
+    <script src="app/components/quanly/page_thoikhoabieu/thoikhoabieuController.js"> </script>
+    <script src="app/components/quanly/page_thongbao/thongbaoController.js"> </script>
+    <script src="app/components/quanly/page_phonghoc/phonghocController.js"> </script>
+    <script src="app/components/quanly/page_doanhnghiep/doanhnghiepController.js"> </script>
+    <script src="app/components/quanly/page_nguoiquanly/nguoiquanlyController.js"> </script>
 </body>
 </html>
 <!-- end document-->
