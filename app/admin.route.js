@@ -59,7 +59,7 @@ adminApp.config(function($routeProvider) {
       templateUrl: "app/components/quanly/page_doanhnghiep/doanhnghiepView.html",
       controller: "doanhnghiepController"
     })
-    .when("/nguoiquanly", {
+    .when("/admin", {
       templateUrl: "app/components/quanly/page_nguoiquanly/nguoiquanlyView.html",
       controller: "nguoiquanlyController"
     })
